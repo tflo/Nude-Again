@@ -1,0 +1,19 @@
+## Interface: 40100
+## X-Curse-Packaged-Version: 4.1.0.6-Release
+## X-Curse-Project-Name: Nudist
+## X-Curse-Project-ID: nudist
+## X-Curse-Repository-ID: wow/nudist/mainline
+
+## Title: Nudist
+## Notes: Sometimes you just want to run around nekkid.
+## Author: Tekkub Stoutwrithe
+## Version: 4.1.0.6
+## X-Website: http://code.google.com/p/tekkub-wow/
+## X-Email: tekkub-wow@googlegroups.com
+## X-Category: Miscellaneous
+
+## LoadManagers: AddonLoader
+## X-LoadOn-Execute: CreateFrame("Frame", nil, CharacterFrame):SetScript("OnShow", function(self) LoadAddOn('Nudist'); self:SetScript("OnShow", nil) end)
+## X-LoadOn-Slash: /nudist
+
+Nudist.lua
