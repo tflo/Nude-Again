@@ -1,5 +1,5 @@
 
-local slots, freeslots, items = {1, 3, 5, 6, 7, 8, 9, 10, 16, 17, 18}, {}, {}
+local slots, freeslots, items = {1, 3, 5, 6, 7, 8, 9, 10, 16, 17}, {}, {}
 
 
 local function GetEmpties()
