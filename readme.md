@@ -1,3 +1,10 @@
+### Preliminary note:
+
+This is a maintenance/fix release of an (apparantly) abandoned addon. The addon this is based on is: https://www.curseforge.com/wow/addons/nudist
+
+If you are the author of the original addon, and don’t like to see this fork of your addon posted here or anywhere, please just leave a note in the Issues thread.
+
+
 ## What this addon does:
 
 Clicking the icon (button) on your char screen or entering “/nudist” in the console strips your char off of all items that would suffer from death (durability-wise).
@@ -9,7 +16,7 @@ What for? I can create a “Nude” set?
 
 In my experience, making a “nude” equip set only works in theory. It works to nude, but to de-nude you would have to call your equip sets, and often these are not only one but some sets in a row. (Eg base equip set for the class, then for the spec, then some different rune variants for the weapons of your DK, you got it, I think). 
 
-Nudist solves this issue by just and simply re-equipping what you had at the point in time when you clicked Nudist. Exactly what you had at that point in time.
+Nudist solves this issue by just and simply re-equipping what you had at the point in time when you clicked Nudist; to _Exactly_ what you had at that point in time. Equip sets are ignored, i.e the addon _records_ your equips and restores them. No fake, no complications, that’s all.
 
 ## Notes on changes since the “old” version by tekkub:
 
