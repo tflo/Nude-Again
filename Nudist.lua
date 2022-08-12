@@ -98,3 +98,32 @@ end
 SLASH_NUDIST1 = "/nudist"
 SlashCmdList["NUDIST"] = handler
 butt:SetScript("OnClick", handler)
+
+
+
+--[=[
+
+Notes
+-----
+
+[^1]:
+
+If we have two of the same items, and with the same enchants, equipped, then they have probably an identical item link. Usually this happens only with the weapon slots (16 and 17).
+
+In that case – for some reason – we cannot equip both items with EquipItemByName(itemlink, slot): One item will be equipped correctly, the other one will not.
+
+As a workaround, we have to equip the second one of the identical items via bag slot: we search all bag slots for a matching item link and then equip the item via UseContainerItem(bag, bagslot).
+
+We could use this method right from the start for slots 16 and 17. But I think it's more economic to equip normally, and check afterwards if one of the originally equipped slots is empty. Then we use the workaround for the missing item only. Currently the check is limited to slots 16 and 17, because _I think_ it is impossible to have identical items in the other slots.
+The C_Timer is necessary, otherwise, if the check comes to quickly, we get all slots returned as not equipped. 1 second seems to be safe, probably we can go a bit faster (0.25s though is too short).
+
+To check _all_ slots for missing items, use this:
+
+-- 			for s, i in pairs(items) do -- Check all slots [^1]
+-- 				if not GetInventoryItemLink("player", s) then
+-- 					EquipItemByBagSlot(i, s)
+-- 				end
+-- 			end
+
+
+]=]
