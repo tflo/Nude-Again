@@ -21,6 +21,18 @@ local function GetNextEmpty()
 	end
 end
 
+local function EquipItemByBagSlot(item, slot)
+	for bag = 0, 4 do
+		local max = GetContainerNumSlots(bag)
+		for bagslot = 1, max do
+			if GetContainerItemLink(bag, bagslot) == item then
+				UseContainerItem(bag, bagslot)
+				print("Reequipped missing item via 'UseContainerItem': Slot", slot, item)
+				return
+			end
+		end
+	end
+end
 
 ---------------------------------
 --      Char frame button      --
@@ -41,27 +53,44 @@ butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 
 
 local function handler()
+
 	if CursorHasItem() then ClearCursor() end
 
-	if next(items) then
-		while next(items) do EquipItemByName(table.remove(items), table.remove(items)) end
+	if #items > 0 then
+
+		for s, i in pairs(items) do
+			EquipItemByName(i, s)
+		end
+
+		C_Timer.After(0.8, function()
+			for s = 16, 17 do -- Check only weapon slots [^1]
+				if not GetInventoryItemLink("player", s) then
+					EquipItemByBagSlot(items[s], s)
+				end
+			end
+			table.wipe(items)
+		end)
+
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
+
 	elseif not InCombatLockdown() then
+
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\nude")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\clothed")
 		GetEmpties()
+
 		for _,i in ipairs(slots) do
 			local bag = GetNextEmpty()
 			if not bag then return end
 
 			local item = GetInventoryItemLink("player", i)
 			if item then
-				table.insert(items, i)
-				table.insert(items, item)
+				table.insert(items, i, item)
 				PickupInventoryItem(i)
 				if bag == 0 then PutItemInBackpack() else PutItemInBag(bag + 19) end
 			end
+
 		end
 	end
 end
