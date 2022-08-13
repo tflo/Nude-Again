@@ -1,5 +1,5 @@
 1.0.0
-- Duplicate item links are now re-equipped correctly (eg duel wielding weapons of same ID and same enchant ID)
+- Duplicate item links are now re-equipped correctly (eg dual-wielding weapons with same ID and same enchant ID)
 - Removed some legacy stuff from code and toc
 - Everything up to date for 9.2.7
 

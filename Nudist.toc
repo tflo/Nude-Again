@@ -1,4 +1,4 @@
-## Interface: 40100
+## Interface: 90205
 ## X-Curse-Packaged-Version: 4.1.0.6-Release
 ## X-Curse-Project-Name: Nudist
 ## X-Curse-Project-ID: nudist
