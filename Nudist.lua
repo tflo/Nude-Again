@@ -55,7 +55,8 @@ butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 local function handler()
 
 	if CursorHasItem() then ClearCursor() end
-
+	if InCombatLockdown() then return end
+	
 	if #items > 0 then
 
 		for s, i in pairs(items) do
@@ -74,7 +75,7 @@ local function handler()
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 
-	elseif not InCombatLockdown() then
+	else
 
 		butt:SetNormalTexture("Interface\\Addons\\Nudist\\nude")
 		butt:SetPushedTexture("Interface\\Addons\\Nudist\\clothed")
