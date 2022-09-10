@@ -1,5 +1,5 @@
 
-local slots, freeslots, items = {1, 3, 5, 6, 7, 8, 9, 10, 16, 17}, {}, {}
+local slots, freeslots, items, allslots = {1, 3, 5, 6, 7, 8, 9, 10, 16, 17}, {}, {}, {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19}
 
 
 local function GetEmpties()
@@ -53,7 +53,8 @@ butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 
 
 local function handler()
-
+	
+	if IsModifierKeyDown() then slots = allslots end 
 	if CursorHasItem() then ClearCursor() end
 	if InCombatLockdown() then return end
 	
