@@ -1,15 +1,8 @@
-## Interface: 90205
-## X-Curse-Packaged-Version: 4.1.0.6-Release
-## X-Curse-Project-Name: Nudist
-## X-Curse-Project-ID: nudist
-## X-Curse-Repository-ID: wow/nudist/mainline
+## Interface: 90207
+## Title: Nudist Again
+## DefaultState: disabled
+## Notes: One-click unequip/reequip your durability-sensitive gear.
+## Version: 1.1.0
+## Author: Mot
 
-## Title: Nudist
-## Notes: Sometimes you just want to run around nekkid.
-## Author: Tekkub Stoutwrithe
-## Version: 4.1.0.6
-## X-Website: http://code.google.com/p/tekkub-wow/
-## X-Email: tekkub-wow@googlegroups.com
-## X-Category: Miscellaneous
-
-Nudist.lua
+main.lua

@@ -27,3 +27,5 @@ Note that the last WotLK version of the addon still “works” with SL, but the
 Trying to re-equip two items that have the same item link (i.e. same item ID and same enchants, may happen with dual-wielded daggers and such) failed without warning. (You ended up with just _one_ weapon, either in slot 16 or in slot 17.)
 
 I solved (hopefully 100%) this problem by restructuring the way the tables are built and introducing an additional check to see if all weapon slots are equipped. If not, we do `UseContainerItem(bag, bagslot)` on the empty slot, after a short delay. `UseContainerItem` is more expensive than `EquipItemByName` (which is used for the “uncomplicated” re-equips) but seems to be the only way to get those dupe-ID items back into their slots correctly.
+
+Now you have also the option to unequip _all_ slots. For this, hold down any modifier key while clicking the button or running the command or macro. (Useful if you have to strip everything to reduce damage output.)
