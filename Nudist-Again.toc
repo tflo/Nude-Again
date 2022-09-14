@@ -1,0 +1,8 @@
+## Interface: 90207
+## Title: Nudist (Again)
+## DefaultState: disabled
+## Notes: One-click unequip/reequip your durability-sensitive (or all) gear. Revived, fixed and improved version of the original Nudist addon by tekkub.
+## Version: 1.1.0
+## Author: Mot
+
+main.lua

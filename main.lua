@@ -44,8 +44,8 @@ butt:SetPoint("BOTTOMRIGHT", CharacterFrame, "TOPRIGHT", -60, -30)
 butt:SetWidth(64) butt:SetHeight(64)
 
 -- Textures --
-butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
-butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
+butt:SetNormalTexture("Interface\\Addons\\Nudist-Again\\clothed")
+butt:SetPushedTexture("Interface\\Addons\\Nudist-Again\\nude")
 
 -- Tooltip bits
 --~ butt:SetScript("OnEnter", ShowTooltip)
@@ -54,9 +54,9 @@ butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
 
 local function handler()
 	
-	if IsModifierKeyDown() then slots = allslots end 
-	if CursorHasItem() then ClearCursor() end
 	if InCombatLockdown() then return end
+	if CursorHasItem() then ClearCursor() end
+	if IsModifierKeyDown() then slots = allslots end 
 	
 	if #items > 0 then
 
@@ -73,13 +73,13 @@ local function handler()
 			table.wipe(items)
 		end)
 
-		butt:SetNormalTexture("Interface\\Addons\\Nudist\\clothed")
-		butt:SetPushedTexture("Interface\\Addons\\Nudist\\nude")
+		butt:SetNormalTexture("Interface\\Addons\\Nudist-Again\\clothed")
+		butt:SetPushedTexture("Interface\\Addons\\Nudist-Again\\nude")
 
 	else
 
-		butt:SetNormalTexture("Interface\\Addons\\Nudist\\nude")
-		butt:SetPushedTexture("Interface\\Addons\\Nudist\\clothed")
+		butt:SetNormalTexture("Interface\\Addons\\Nudist-Again\\nude")
+		butt:SetPushedTexture("Interface\\Addons\\Nudist-Again\\clothed")
 		GetEmpties()
 
 		for _,i in ipairs(slots) do
