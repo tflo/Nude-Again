@@ -1,12 +1,18 @@
+#### 1.2.0 (2022-09-15)
+- Button status now closer tied to real equipped/nude status
+- Improved logic of the equal-weapon-ID reequip, plus additional check
+- Added status and failure messages
+- Fixed full nude bug
+- Minor optimizations
+
 #### 1.1.0 (2022-09-10)
 - Disabled also re-equipping if in combat lockdown (instead of only unequipping)
-  - This should minimize the risk of incomplete re-equipping
 - _New feature_: If a modifier key is down while clicking the button (or launching the command/macro), then all slots will be unequipped.
-  - This can be useful in situations where you have to strip everything, in order to reduce damage output (e.g. old instances where the boss must not be one-shot for an achievement).
+  - This can be useful in situations where you have to strip everything, in order to reduce damage output (e.g. for old instance achievements where the boss must not be one-shot).
 - toc: update for 9.2.7
 
 #### 1.0.0 (2022-08-13)
-- Duplicate item links are now re-equipped correctly (e.g. dual-wielding weapons with same ID and same enchant ID)
+- Equal item links are now re-equipped correctly (e.g. dual-wielding weapons with same ID and same enchant ID)
 - Removed some legacy stuff from code and toc
 - Everything up to date for 9.2.7
 
