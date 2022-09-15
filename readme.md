@@ -9,7 +9,7 @@ If you are the author of the original addon, and don’t like to see this fork o
 
 ## What this addon does:
 
-Clicking the icon (button) on your char screen or entering “/nudist” in the console (or via macro) strips your char off of all items that would suffer from death (durability-wise).
+Clicking the Gnome button on your char frame or entering “/nudist” in the console (or via macro) strips your char off of all items that would suffer from death (durability-wise).
 
 Doing the same again re-equips you to exactly the same state you were at when you clicked the button first (or when you entered the command).
 This is the main point of this addon: It re-equips you to the state of when you clicked the button, completely independent of any Blizz equip sets or BtWLoadouts equip sets or such. 
