@@ -18,7 +18,6 @@ local function GetEmpties()
 	end
 end
 
-
 local function GetNextEmpty()
 	for i=0,4 do
 		if freeslots[i] > 0 then
@@ -34,16 +33,13 @@ local function EquipItemByBagSlot(item, slot)
 		for bagslot = 1, max do
 			if GetContainerItemLink(bag, bagslot) == item then
 				UseContainerItem(bag, bagslot)
-				print("Reequipped missing item via 'UseContainerItem': Slot", slot, item)
+				print("Reequipped missing item via 'UseContainerItem': Slot", slot, item) -- debug
 				return
 			end
 		end
 	end
 end
 
----------------------------------
---      Char frame button      --
----------------------------------
 local function UnequipDone(m)
 	butt:SetNormalTexture([[Interface\Addons\Nudist-Again\nude]])
 	butt:SetPushedTexture([[Interface\Addons\Nudist-Again\clothed]])
@@ -112,7 +108,7 @@ local function handler()
 			local bag = GetNextEmpty()
 			if not bag then return end
 
-			local item = GetInventoryItemLink("player", i)
+			local item = GetInventoryItemLink('player', i)
 			if item then
 				table.insert(items, i, item)
 				PickupInventoryItem(i)
@@ -120,12 +116,13 @@ local function handler()
 			end
 
 		end
+		UnequipDone(msg)
 	end
 end
 
-SLASH_NUDIST1 = "/nudist"
-SlashCmdList["NUDIST"] = handler
-butt:SetScript("OnClick", handler)
+SLASH_NUDIST1 = '/nudist'
+SlashCmdList['NUDIST'] = handler
+butt:SetScript('OnClick', handler)
 
 
 
@@ -148,7 +145,7 @@ The C_Timer is necessary, otherwise, if the check comes to quickly, we get all s
 To check _all_ slots for missing items, use this:
 
 -- 			for s, i in pairs(items) do -- Check all slots [^1]
--- 				if not GetInventoryItemLink("player", s) then
+-- 				if not GetInventoryItemLink('player', s) then
 -- 					EquipItemByBagSlot(i, s)
 -- 				end
 -- 			end
