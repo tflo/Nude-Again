@@ -24,8 +24,8 @@ local function GetEmpties()
 		freeslots[i] = 0
 	end
 	for bag = 0, 4 do
-		for slot = 1, GetContainerNumSlots(bag) do
-			if not GetContainerItemInfo(bag, slot) then freeslots[bag] = freeslots[bag] + 1 end
+		for slot = 1, C_Container.GetContainerNumSlots(bag) do
+			if not C_Container.GetContainerItemInfo(bag, slot) then freeslots[bag] = freeslots[bag] + 1 end
 		end
 	end
 end
@@ -41,10 +41,10 @@ end
 
 local function EquipItemByBagSlot(item, slot)
 	for bag = 0, 4 do
-		local max = GetContainerNumSlots(bag)
+		local max = C_Container.GetContainerNumSlots(bag)
 		for bagslot = 1, max do
-			if GetContainerItemLink(bag, bagslot) == item then
-				UseContainerItem(bag, bagslot)
+			if C_Container.GetContainerItemLink(bag, bagslot) == item then
+				C_Container.UseContainerItem(bag, bagslot)
 				print("Reequipped missing item via 'UseContainerItem': Slot", slot, item) -- debug
 				return
 			end
