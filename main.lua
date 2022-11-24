@@ -1,3 +1,8 @@
+local debug_prefix = 'Nudist Debug:'
+local function dp(...) -- debugprint
+	-- return
+	print(debug_prefix, ...)
+end
 
 local sensitiveSlots, allSlots, items, freeslots =
 	{ 1, 3, 5, 6, 7, 8, 9, 10, 16, 17 },
