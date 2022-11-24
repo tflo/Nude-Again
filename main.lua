@@ -4,6 +4,13 @@ local function dp(...) -- debugprint
 	print(debug_prefix, ...)
 end
 
+--[[
+This has changed in DF! (was 19).
+https://www.wowinterface.com/forums/showthread.php?s=285e4b422a2f9c7ae7954929a74a3ac7&p=341652
+https://github.com/Ketho/wow-ui-source-df/search?q=CONTAINER_BAG_OFFSET
+]]
+local CONTAINER_BAG_OFFSET = 30
+
 local sensitiveSlots, allSlots, items, freeslots =
 	{ 1, 3, 5, 6, 7, 8, 9, 10, 16, 17 },
 	{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19 },
@@ -128,7 +135,7 @@ local function handler()
 				if bag == 0 then
 					PutItemInBackpack()
 				else
-					PutItemInBag(bag + 19)
+					PutItemInBag(bag + CONTAINER_BAG_OFFSET)
 				end
 			end
 		end
