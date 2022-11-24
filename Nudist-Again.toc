@@ -1,7 +1,7 @@
-## Interface: 90207
+## Interface: 100002
 ## Title: Nudist (Again)
-## Notes: One-click unequip/reequip your durability-sensitive (or all) gear. Revived, fixed and improved version of the original Nudist addon by tekkub from 2011.
-## Version: 1.2.0
+## Notes: Strip/reequip your durability-sensitive equipment (or all equipment) with one click for economical dying. Revived, fixed and improved version of the original Nudist addon by tekkub from 2011.
+## Version: 1.2.1
 ## Author: Mot
 ## DefaultState: enabled
 ## X-Wago-ID: LvNAMQNo

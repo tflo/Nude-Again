@@ -16,9 +16,9 @@ This is the main point of this addon: It re-equips you to the state of when you 
 
 What for? I can create a “Nude” set?
 
-A “nude” equip set works of course fine for getting nude. But to de-nude (re-equip) you would have to call your equip sets, and often these are not only one but some sets in a row. E.g., with a base equip set for the class + set for the spec + set for the weapons + set for the legendary you would have to activate 4 equip sets to get back to the state where you have been before nuding. 
+A “nude” equip set works of course fine for getting nude. But to de-nude (reequip) you would have to call your equip sets, and often these are not only one but some sets in a row. E.g., with a base equip set for the class + set for the spec + set for the weapons + set for the legendary you would have to activate 4 equip sets to get back to the state where you have been before nuding. 
 
-Nudist solves this issue by one-click re-equipping exactly what you had at the point in time when you first clicked Nudist. It does not know or care about your equip sets or BtWLoadouts, i.e the addon memorizes your actual equips and restores them. (Thus, it restores equally fine if your equipment wasn’t saved in a set at all.)
+Nudist solves this issue by one-click re-equipping exactly what you had at the point in time when you first clicked Nudist. It does not know or care about your equip sets or BtWLoadouts, i.e. the addon memorizes your actual equips and restores them. (Thus, it restores equally fine if your equipment wasn’t saved in a set at all.)
 
 ## Notes on changes since the “old” version by tekkub:
 
@@ -30,4 +30,4 @@ Trying to re-equip two items that have the same item link (i.e. same item ID and
 
 I solved (hopefully 100%) this problem by restructuring the way the tables are built and introducing an additional check to see if all weapon slots are equipped. If not, we do `UseContainerItem(bag, bagslot)` on the empty slot, after a short delay. `UseContainerItem` is more expensive than `EquipItemByName` (which is used for the “uncomplicated” re-equips) but seems to be the only way to get those dupe-ID items back into their slots correctly.
 
-As a new feature, now you have also the option to unequip _all_ slots. For this, hold down any modifier key while clicking the button or executing the command or macro. (Useful if you have to strip everything to reduce damage output.)
+As a new feature, now you have also the option to unequip _all_ slots. For this, hold down any modifier key while clicking the button or executing the command or macro. (Useful if you have to strip everything to reduce damage output for low-level achievements etc.)

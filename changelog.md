@@ -1,3 +1,9 @@
+#### 1.2.1 (2022-11-24)
+- Works now with 10.0.2
+  - Sneaky Blizz guys changed the offset of the bag numbers from 19 to 30!
+- Minor optimizations
+- toc: updated client version number
+
 #### 1.2.0 (2022-09-15)
 - Button status now closer tied to real equipped/nude status
 - Improved logic of the equal-weapon-ID reequip, plus additional check
