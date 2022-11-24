@@ -32,13 +32,8 @@ butt:SetNormalTexture 'Interface/Addons/Nudist-Again/clothed'
 butt:SetPushedTexture 'Interface/Addons/Nudist-Again/nude'
 
 local function GetEmpties()
-	for i = 0, 4 do
-		freeslots[i] = 0
-	end
 	for bag = 0, 4 do
-		for slot = 1, C_Container.GetContainerNumSlots(bag) do
-			if not C_Container.GetContainerItemInfo(bag, slot) then freeslots[bag] = freeslots[bag] + 1 end
-		end
+		freeslots[bag] = C_Container.GetContainerNumFreeSlots(bag)
 	end
 end
 
